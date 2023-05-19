@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bookmark</title>
+  <link rel="icon" type="image/png" href="img/bookmark-icon.png">
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+  <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+  <h1>Bookmark App</h1>
+  <button class="add-bookmark" id="show-modal">Add Bookmark</button>
+
+  <!-- Modal -->
+  <div class="modal" id="modal">
+    <!-- Modal content -->
+    <form id="bookmark-form" class="animate__animated animate__slideInDown">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h2>Add Bookmark</h2>
+          <i class="fa-solid fa-xmark close-modal"></i>
+        </div>
+        <div class="input-fields"> 
+        <label for="website-name">Website Name</label>
+        <input type="text" id="website-name" placeholder="Google">
+        <span class="error-msg" id="website-error-msg"></span>
+        <label for="website-url">Website URL</label>
+        <input type="text" id="website-url" placeholder="google.com">
+        <span class="error-msg" id="error-msg"></span>
+        <span id="added-msg"></span>
+        </div>
+        <button type="submit" class="save-btn" id="saveBtn">Save</button>
+      </div>
+    </form>
+  </div><!-- END .modal -->
+
+  <!-- Bookmark Items -->
+  <div id="bookmark-container">
+  </div>
+
+  <!-- Script -->
+  <script src="js/script.js"></script>
+</body>
+</html>
